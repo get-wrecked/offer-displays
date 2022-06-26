@@ -300,7 +300,8 @@
                         <label class="col-form-label" for="numberOfRoundsToIPO">
                             Additional funding rounds through IPO</label>
                         <p class="font-italic">We expect 2 more rounds pre-IPO
-                            <br>x
+                            <br>This model assumes 10% dilution per round
+                            <br/>
                             <a href="https://www.umbrant.com/startup-equity-calculator-faq/#estimateIPO">See this FAQ answer for more on this topic</a>.
                         </p>
                     </div>
@@ -501,17 +502,8 @@
         // Assume dilution decreases over time
         const dilutionAfterRound = [];
         {
-            let i = 0;
-            for (let k = 0; i < numberOfRounds, k < 1; i++, k++) {
-                dilutionAfterRound.push(0.25);
-            }
-            for (let k = 0; i < numberOfRounds, k < 3; i++, k++) {
-                dilutionAfterRound.push(0.20);
-            }
-            for (let k = 0; i < numberOfRounds, k < 3; i++, k++) {
-                dilutionAfterRound.push(0.15);
-            }
-            for (; i < numberOfRounds; i++) {
+
+            for (var i =0; i < numberOfRounds; i++) {
                 dilutionAfterRound.push(0.10);
             }
         }
