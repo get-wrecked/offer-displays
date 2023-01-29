@@ -539,9 +539,13 @@
                     continue;
                 }
                 const comp = {}
+              
                 comp.companyValuation = valuationPerRound[i];
                 comp.equityPercentage = userNumShares / (totalNumShares * runningDilution);
                 comp.equityDollars = comp.companyValuation * userNumShares / (totalNumShares * runningDilution) - costToStrikeDollars;
+                 if(comp.equittyDollars <= 0) {
+                    comp.equityDollars = 0;
+                }
                 comp.yearlyEquityDollars = comp.equityDollars / vestingPeriodYears;
                 comp.yearlyTotalCompDollars = comp.yearlyEquityDollars + userCashCompensation;
                 compensationPerRound.set(i, comp);
