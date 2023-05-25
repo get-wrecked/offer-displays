@@ -445,6 +445,7 @@
     function fillParams() {
         document.getElementById('userCashCompensation').value = findGetParameter("base");
         document.getElementById('userNumShares').value = findGetParameter("options");
+        document.getElementById('userStrikePrice').value = findGetParameter("strike");
         setTimeout(function() {
             document.getElementById("calculate").click();
         }, 200)
